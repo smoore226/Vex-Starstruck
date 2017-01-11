@@ -18,6 +18,57 @@
 task main()
 {
 
+void StopAll (int a)
+{
+motor[port1] = 0;
+motor[port2] = 0;
+motor[port3] = 0;
+motor[port4] = 0;
+motor[port5] = 0;
+motor[port6] = 0;
+motor[port7] = 0;
+motor[port8] = 0;
+motor[port9] = 0;
+motor[port10] = 0;
+wait1Msec(a);
+}
+
+void StopDrive (int b)
+{
+motor[RightFront] = 0;
+motor[RightBack] = 0;
+motor[KLeftFront] = 0;
+motor[LeftBack] = 0;        
+wait1Msec(b);
+}
+
+void StopArm (int c)
+{
+motor[RightArmRight] = 0;
+motor[RightArmLeft] = 0;     
+motor[LeftArmRight] = 0;
+motor[LeftArmLeft] = 0;
+wait1Msec(c);
+}
+
+void DriveForward (int d)
+{
+motor[RightFront] = 127;
+motor[RightBack] = 127;
+motor[LeftFront] = 127;
+motor[LeftBack] = 127;
+wait1Msec(d);
+}
+
+void DriveBackward (int e)
+{
+motor[RightFront] = 127;
+motor[RightBack] = 127;
+motor[LeftFront] = 127;
+motor[LeftBack] = 127;
+wait1Msec(e);
+}
+
 //Left Side Is I2C_1
 	nMotorEncoder[I2C_1] = 0;//sets Encoders to zero
 	nMotorEncoder[I2C_2] = 0;
